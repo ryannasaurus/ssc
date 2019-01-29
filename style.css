@@ -1,8 +1,9 @@
 @font-face { font-family: Pixellari; src: url("Fonts/Pixellari.ttf"); }
 
-body {
+html {
     font-family: "Pixellari";
-    background-image: url("Images/bgSubspace.jpg");
+    background: url("Images/bgSubspace.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* QMessageBox {
