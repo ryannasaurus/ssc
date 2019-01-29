@@ -1,0 +1,162 @@
+@font-face { font-family: Pixellari; src: url("Fonts/Pixellari.ttf"); }
+
+body {
+    font-family: "Pixellari";
+    background-image: url("Images/bgSubspace.jpg");
+}
+
+/* QMessageBox {
+    border: 2px solid black;
+}
+
+QMessageBox QLabel {
+    color: black;
+    min-width: 700px;
+    padding-right: 20px;
+}
+
+QMessageBox QPushButton {
+    padding: 5px 10px 5px 10px;
+}
+
+QPushButton {
+    background-color: #E6E6E6;
+    border: 2px solid black;
+    font-size: 32px;
+}
+
+QPushButton::hover {
+    background-color: #D8D8D8;
+}
+
+QPushButton::pressed {
+    background-color: #BDBDBD;
+    border: 2px solid #151515;
+}
+
+QPushButton#minimize{
+    padding: 90px;
+    font-size: 32px;
+}
+
+QPushButton#close {
+    font-size: 16px;
+}
+
+QPushButton#attack {
+    font-size: 40px;
+}
+
+QPushButton#attack::hover {
+    background-color: pink;
+}
+
+QPushButton#attack::pressed {
+    background-color: #F4393B;
+    border: 2px solid #151515;
+}
+
+QPushButton#menu {
+    font-size: 20px;
+}
+
+QPushButton#mii {
+    padding-left: 135;
+    text-align: left;
+}
+
+QPushButton#dmgUpgrade {
+    background-color: #F4393B;
+    font-size: 20px;
+}
+
+QPushButton#goldUpgrade {
+    background-color: yellow;
+    font-size: 20px;
+}
+
+QPushButton#boostUpgrade {
+    background-color: cyan;
+    font-size: 20px;
+}
+
+QPushButton#attackUpgrade {
+    background-color: red;
+    font-size: 20px;
+}
+
+QToolTip {
+    background-color: black;
+}
+
+QLabel {
+    color: #E6E6E6;
+    font-size: 40px;
+}
+
+QLabel#label {
+    font-size: 24px;
+}
+
+QLabel#icon {
+    padding-top: 1px;
+    padding-left: 2px;
+}
+
+QLabel#costLabel {
+    color: goldenrod;
+    font-size: 24px;
+    padding-top: 90px;
+    padding-left: 130px;
+    text-align: left;
+}
+
+QLabel#amountLabel {
+    color: #A4A4A4;
+    font-size: 88px;
+    padding-top: 5px;
+    text-align: right;
+}
+
+QLabel#dpsLabel {
+    color: #F4393B;
+    font-size: 24px;
+    padding-top: 90px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+QLabel#title {
+    font-size: 16px;
+}
+
+QLabel#event {
+    font-size: 24px;
+}
+
+QLabel#hpLabel {
+    color: red;
+    font-size: 24px;
+}
+
+QLabel#lvlLabel {
+    color: #04B404;
+    font-size: 24px;
+}
+
+QLabel#goldLabel {
+    color: goldenrod;
+    font-size: 24px;
+}
+
+QLabel#num {
+    font-size: 32px;
+}
+
+QProgressBar#hpBar::chunk {
+    background-color: red;
+}
+
+QProgressBar#progressBar::chunk {
+    background-color: #04B404;
+} */

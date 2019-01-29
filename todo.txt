@@ -1,0 +1,65 @@
+--- legend ---
+* partially completed
+/ completed, may be updated
+
+--- stages ---
+1. Subspace Emissary /
+2. Legend of Zelda
+    - The Minish Cap
+        - Vaati
+    - Ocarina of Time
+        - Ganondorf
+        - Demon King Ganon
+    - 3 Paths
+        1. Legend of Zelda
+            - Ganon
+        2. Majora's Mask
+            - Mask (100%)
+            - Incarnation (66%)
+            - Wrath (33%)
+        3. Wind Waker
+            - Ganondorf
+    - Breath of the Wild
+        - Ganondorf
+3. Andross
+4. Dr. Robotnik
+
+--- general ---
+- splash screen with game image /
+- changing background images *
+    - scaling images
+- implement autosave feature
+    - check if autosave exists and prompt user
+
+--- gameplay ---
+- synergies
+    - click dmg synergy
+    - mii synergy
+- action box
+    - next boss image /
+    - image of newly unlocked fighter /
+    - image of boss encounter /
+        - win and defeat *
+    - accompanying text /
+- battle images
+    - add images for enemies /
+    - animate dmg counters
+    - animate death
+- interactive boss fights
+    - lose condition
+        - timed
+        - dmg to player (hero?)
+    - heroes do different attacks
+    - clicking has role
+- heroes -> needs to scroll
+    - fix hero button sizes
+    - implement single-purchase feature
+    - add more heroes *
+- upgrades -> revamp page
+    - implement mii upgrades /
+    - implement hero upgrades
+    - upgrade images
+    - click damage upgrades
+- settings
+    - implement save button /
+    - implement load button /
