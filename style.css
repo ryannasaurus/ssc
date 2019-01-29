@@ -1,9 +1,29 @@
 @font-face { font-family: Pixellari; src: url("Fonts/Pixellari.ttf"); }
 
 html {
-    font-family: "Pixellari";
     background: url("Images/bgSubspace.jpg") no-repeat center center fixed;
     background-size: cover;
+    font-family: "Pixellari";
+}
+
+body {
+    margin: 0;
+}
+
+#panel {
+    display: flex;
+}
+
+#leftPanel {
+    width: 30%;
+}
+
+#centrePanel {
+    width: 33%;
+}
+
+#rightPanel {
+    width: 37%;
 }
 
 /* QMessageBox {
@@ -18,93 +38,106 @@ QMessageBox QLabel {
 
 QMessageBox QPushButton {
     padding: 5px 10px 5px 10px;
+}*/
+
+.fighterImage {
+    text-align: left;
+    float: left;
 }
 
-QPushButton {
+button {
+    align-items: center;
     background-color: #E6E6E6;
     border: 2px solid black;
+    display: inline-flex;
+    font-family: Pixellari;
     font-size: 32px;
+    width: 100%;
 }
 
-QPushButton::hover {
+button:hover {
     background-color: #D8D8D8;
 }
 
-QPushButton::pressed {
+button:active {
     background-color: #BDBDBD;
     border: 2px solid #151515;
 }
-
-QPushButton#minimize{
+/*
+#minimize{
     padding: 90px;
     font-size: 32px;
 }
 
-QPushButton#close {
+#close {
     font-size: 16px;
 }
 
-QPushButton#attack {
+#attack {
     font-size: 40px;
 }
 
-QPushButton#attack::hover {
+#attack::hover {
     background-color: pink;
 }
 
-QPushButton#attack::pressed {
+#attack::pressed {
     background-color: #F4393B;
     border: 2px solid #151515;
 }
 
-QPushButton#menu {
+#menu {
     font-size: 20px;
-}
+}*/
 
-QPushButton#mii {
-    padding-left: 135;
-    text-align: left;
-}
-
-QPushButton#dmgUpgrade {
+    .mii {
+        color: black;
+        padding-top: 2px;
+        text-align: left;
+    }
+/*
+#dmgUpgrade {
     background-color: #F4393B;
     font-size: 20px;
 }
 
-QPushButton#goldUpgrade {
+#goldUpgrade {
     background-color: yellow;
     font-size: 20px;
 }
 
-QPushButton#boostUpgrade {
+#boostUpgrade {
     background-color: cyan;
     font-size: 20px;
 }
 
-QPushButton#attackUpgrade {
+#attackUpgrade {
     background-color: red;
     font-size: 20px;
-}
+}*/
 
-QToolTip {
-    background-color: black;
-}
-
-QLabel {
+p {
     color: #E6E6E6;
-    font-size: 40px;
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
 }
 
-QLabel#label {
+    #hp {
+        font-size: 40px;
+    }
+
+/*
+#label {
     font-size: 24px;
 }
 
-QLabel#icon {
+#icon {
     padding-top: 1px;
     padding-left: 2px;
 }
 
-QLabel#costLabel {
+#costLabel {
     color: goldenrod;
     font-size: 24px;
     padding-top: 90px;
@@ -112,14 +145,14 @@ QLabel#costLabel {
     text-align: left;
 }
 
-QLabel#amountLabel {
+#amountLabel {
     color: #A4A4A4;
     font-size: 88px;
     padding-top: 5px;
     text-align: right;
 }
 
-QLabel#dpsLabel {
+#dpsLabel {
     color: #F4393B;
     font-size: 24px;
     padding-top: 90px;
@@ -127,30 +160,31 @@ QLabel#dpsLabel {
     text-align: right;
 }
 
-QLabel#title {
+#title {
     font-size: 16px;
 }
 
-QLabel#event {
+#event {
     font-size: 24px;
-}
+}*/
 
-QLabel#hpLabel {
-    color: red;
-    font-size: 24px;
-}
-
-QLabel#lvlLabel {
+    #hpLabel {
+        color: red;
+    }
+/*
+#lvlLabel {
     color: #04B404;
-    font-size: 24px;
-}
+}*/
 
-QLabel#goldLabel {
+#goldLabel {
     color: goldenrod;
-    font-size: 24px;
 }
 
-QLabel#num {
+#gold {
+    font-size: 40px;
+}
+/*
+#num {
     font-size: 32px;
 }
 
