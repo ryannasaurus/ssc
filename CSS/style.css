@@ -1,0 +1,183 @@
+@font-face { font-family: Pixellari; src: url("../Fonts/Pixellari.ttf"); }
+
+html, body, div, span, button, img, p {
+    margin: 0px;
+    padding: 0px;   
+}
+
+html {
+    background: url("../Images/bgSubspace.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Pixellari";
+}
+
+body {
+    margin: .3% 0 .3% 0;
+}
+
+#panel {
+    display: flex;
+}
+
+#leftPanel {
+    width: 30%;
+}
+
+#centrePanel {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+#attackPanel {
+    display: inline-block;
+    width: 91%;
+}
+
+#rightPanel {
+    width: 37%;
+}
+
+#buttonPanel {
+    display: inline-flex;
+    align-items: flex-start;
+}
+
+/* QMessageBox {
+    border: 2px solid black;
+}
+
+QMessageBox QLabel {
+    color: black;
+    min-width: 700px;
+    padding-right: 20px;
+}
+
+QMessageBox QPushButton {
+    padding: 5px 10px 5px 10px;
+}*/
+
+/* img {
+    height: 100%;
+} */
+
+#enemy {
+    height:auto;
+}
+
+p {
+    color: #E6E6E6;
+    font-size: 24px;
+    text-align: center;
+}
+
+#hp {
+    font-size: 40px;
+}
+
+.label {
+    font-size: 40px;
+}
+
+.icon {
+    float: left;
+    height: 120px;
+    width: 125px;
+    padding-top: 1px;
+}
+
+.buttonInfo {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 130px;
+    bottom: 20px;
+    right: 0px;
+}
+
+.miiText {
+    color: black;
+    font-size: 32px;
+    position: relative;
+    text-align: left;
+}
+
+.costLabel {
+    color: goldenrod;
+    font-size: 24px;
+    position: relative;
+    text-align: left;
+}
+
+.amountLabel {
+    color: #A4A4A4;
+    font-size: 88px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    text-align: right;
+}
+
+.dpsLabel {
+    color: #F4393B;
+    font-size: 24px;
+    position: absolute;
+    top: 73px;
+    right: 25px;
+    text-align: right;
+}
+
+#title {
+    font-size: 16px;
+}
+
+#event {
+    font-size: 24px;
+}
+
+#hpLabel {
+    color: red;
+}
+
+#lvlLabel {
+    color: #04B404;
+}
+
+#progress {
+    font-size: 40px;
+}
+
+#goldLabel {
+    color: goldenrod;
+}
+
+#gold {
+    font-size: 40px;
+}
+
+#num {
+    font-size: 32px;
+}
+
+#hpBar {
+    background-color: #E6E6E6;
+    border: 2px solid black;
+    color: red;
+    width: 90%;
+}
+
+#hpBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
+    background: red;
+}
+
+#lvlBar {
+    background-color: #E6E6E6;
+    border: 2px solid black;
+    color: #04B404;
+    width: 90%;
+}
+
+#lvlBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
+    background-color: #04B404;
+}
