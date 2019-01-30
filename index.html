@@ -9,13 +9,18 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'UA-133471422-1');
     </script>
+    <script src="//cdn.rawgit.com/erosson/swarm-numberformat/v0.4.0/dist/swarm-numberformat.min.js"></script>
+    <script src="script.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/buttons.css">
     <link rel="shortcut icon" type="image/png" href="Images/favicon.png">
+
     <title>SSC Alpha</title>
+
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -24,23 +29,60 @@
 
         </div>
         <div id="centrePanel">
+            <p class="label">PRIMID</p>
             <p id="hpLabel">HP</p>
             <p id="hp">10</p>
+            <progress id="hpBar" max="10" value="10"></progress>
+            <div id="enemy">
+                <img src="Images/Enemies/primid.png">
+            </div>
+            <div id="attackPanel">
+                <button class="attack">ATTACK</button>
+            </div>
+            <p id="lvlLabel">Level 1</p>
+            <p id="progress">0/10</p>
+            <progress id="lvlBar" max="10" value="10"></progress>
         </div>
         <div id="rightPanel">
+            <div id="buttonPanel">
+                <button class="menu">FIGHTERS</button>
+                <button class="menu">U</button>
+                <button class="menu">S</button>
+            </div>
             <p id="goldLabel">Gold</p>
             <p id="gold">0</p>
             <button class="mii">
-                <img class="fighterImage" src="Images/Fighters/brawler.png">
-                MII<br>BRAWLER
+                <div class="icon">
+                    <img src="Images/Fighters/brawler.png">
+                </div>
+                <div class="buttonInfo">
+                    <div class="miiText">MII<br>BRAWLER</div>
+                    <div class="costLabel">25</div>
+                    <span class="dpsLabel">0</span>
+                    <div class="amountLabel">0</div>
+                </div>
             </button>
             <button class="mii">
-                <img class="fighterImage" src="Images/Fighters/fighter.png">
-                MII<br>FIGHTER
+                <div class="icon">
+                    <img src="Images/Fighters/fighter.png">
+                </div>
+                <div class="buttonInfo">
+                    <div class="miiText">MII<br>FIGHTER</div>
+                    <div class="costLabel">150</div>
+                    <span class="dpsLabel">0</span>
+                    <div class="amountLabel">0</div>
+                </div>
             </button>
             <button class="mii">
-                <img class="fighterImage" src="Images/Fighters/gunner.png">
-                MII<br>GUNNER
+                <div class="icon">
+                    <img src="Images/Fighters/gunner.png">
+                </div>
+                <div class="buttonInfo">
+                    <div class="miiText">MII<br>GUNNER</div>
+                    <div class="costLabel">500</div>
+                    <span class="dpsLabel">0</span>
+                    <div class="amountLabel">0</div>
+                </div>
             </button>
         </div>
     </div>
