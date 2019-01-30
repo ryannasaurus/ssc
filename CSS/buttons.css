@@ -1,0 +1,63 @@
+button {
+    background-color: #E6E6E6;
+    border: 2px solid black;
+    font-family: Pixellari;
+    font-size: 32px;
+}
+
+button:hover {
+    background-color: #D8D8D8;
+}
+
+button:active {
+    background-color: #BDBDBD;
+    border: 2px solid #151515;
+}
+
+.attack {
+    font-size: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.attack:hover {
+    background-color: pink;
+}
+
+.attack:active {
+    background-color: #F4393B;
+    border: 2px solid #151515;
+}
+
+.menu {
+    font-size: 20px;
+    padding: 8px 16px 8px 16px;
+}
+
+.mii {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+#dmgUpgrade {
+    background-color: #F4393B;
+    font-size: 20px;
+}
+
+#goldUpgrade {
+    background-color: yellow;
+    font-size: 20px;
+}
+
+#boostUpgrade {
+    background-color: cyan;
+    font-size: 20px;
+}
+
+#attackUpgrade {
+    background-color: red;
+    font-size: 20px;
+}
