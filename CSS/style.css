@@ -27,6 +27,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding-top: 5px;
     width: 33%;
 }
 
@@ -41,7 +42,7 @@ body {
 
 #buttonPanel {
     display: inline-flex;
-    align-items: flex-start;
+    text-align: left;
 }
 
 /* QMessageBox {
@@ -66,25 +67,29 @@ QMessageBox QPushButton {
     height:auto;
 }
 
-p {
+div, p, span {
     color: #E6E6E6;
     font-size: 24px;
-    text-align: center;
 }
 
-#hp {
-    font-size: 40px;
+p {
+    text-align: center;
 }
 
 .label {
     font-size: 40px;
 }
 
+#spiritsLabel {
+    color: #1f8f43;
+    padding-top: 7px;
+}
+
 .icon {
     float: left;
     height: 120px;
     width: 125px;
-    padding-top: 1px;
+    padding-top: 2px;
 }
 
 .buttonInfo {
@@ -104,24 +109,31 @@ p {
 }
 
 .costLabel {
-    color: goldenrod;
-    font-size: 24px;
+    color: #1f8f43;
     position: relative;
+    padding-left: 22px;
     text-align: left;
 }
 
-.amountLabel {
-    color: #A4A4A4;
-    font-size: 88px;
+.costLabel::before {
+    content: url("../Images/spiritsIcon.png");
+    height: 20px;
+    width: 20px;
     position: absolute;
-    top: 0px;
-    right: 20px;
+    left: 2px;
+}
+
+.amountLabel {
+    color: #bebebe;
+    font-size: 120px;
+    position: absolute;
+    top: -10px;
+    right: 15px;
     text-align: right;
 }
 
 .dpsLabel {
     color: #F4393B;
-    font-size: 24px;
     position: absolute;
     top: 73px;
     right: 25px;
@@ -141,19 +153,18 @@ p {
 }
 
 #lvlLabel {
-    color: #04B404;
+    color: #00ff22;
 }
 
-#progress {
-    font-size: 40px;
+#lvlBar {
+    background-color: #E6E6E6;
+    border: 2px solid black;
+    color: #00ff22;
+    width: 90%;
 }
 
-#goldLabel {
-    color: goldenrod;
-}
-
-#gold {
-    font-size: 40px;
+#lvlBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
+    background-color: #00ff22;
 }
 
 #num {
@@ -169,15 +180,4 @@ p {
 
 #hpBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
     background: red;
-}
-
-#lvlBar {
-    background-color: #E6E6E6;
-    border: 2px solid black;
-    color: #04B404;
-    width: 90%;
-}
-
-#lvlBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
-    background-color: #04B404;
 }
