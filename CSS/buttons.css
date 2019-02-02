@@ -43,6 +43,14 @@ button:active {
     width: 100%;
 }
 
+.mii:active {
+    border-right: 0px;
+}
+
+.mii:active .amountLabel {
+    color: #E6E6E6;
+}
+
 #dmgUpgrade {
     background-color: #F4393B;
     font-size: 20px;
