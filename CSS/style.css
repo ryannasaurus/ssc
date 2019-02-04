@@ -1,8 +1,24 @@
-@font-face { font-family: Pixellari; src: url("../Fonts/Pixellari.ttf"); }
+@font-face { 
+    font-family: Pixellari;
+    src: url("../Fonts/Pixellari.ttf");
+}
+
+:disabled {
+    filter: grayscale(100%);
+    opacity: .9;
+}
+
+.hidden {
+    display: none;
+}
+
+.mii.hidden {
+    display: none;
+}
 
 html, body, div, span, button, img, p {
-    margin: 0px;
-    padding: 0px;   
+    margin: 0;
+    padding: 0;   
 }
 
 html {
@@ -11,21 +27,20 @@ html {
     font-family: "Pixellari";
 }
 
-body {
-    margin: .3% 0 .3% 0;
-}
-
-#panel {
+#mainPanel {
     display: flex;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
 }
 
 #leftPanel {
+    position: relative;
     width: 30%;
 }
 
 #centrePanel {
-    align-items: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding-top: 5px;
     width: 33%;
@@ -59,12 +74,16 @@ QMessageBox QPushButton {
     padding: 5px 10px 5px 10px;
 }*/
 
-/* img {
-    height: 100%;
-} */
+img {
+    position: relative;
+}
 
 #enemy {
-    height:auto;
+    height: 45vh;
+}
+
+#enemyImage {
+    height: 100%;
 }
 
 div, p, span {
@@ -86,7 +105,6 @@ p {
 }
 
 .icon {
-    float: left;
     height: 120px;
     width: 125px;
     padding-top: 2px;
@@ -98,7 +116,7 @@ p {
     top: 20px;
     left: 130px;
     bottom: 20px;
-    right: 0px;
+    right: 0;
 }
 
 .miiText {
@@ -140,12 +158,16 @@ p {
     text-align: right;
 }
 
-#title {
-    font-size: 16px;
+.event {
+    font-size: 24px;
 }
 
-#event {
-    font-size: 24px;
+#eventLabel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
 }
 
 #hpLabel {
@@ -154,21 +176,6 @@ p {
 
 #lvlLabel {
     color: #00ff22;
-}
-
-#lvlBar {
-    background-color: #E6E6E6;
-    border: 2px solid black;
-    color: #00ff22;
-    width: 90%;
-}
-
-#lvlBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
-    background-color: #00ff22;
-}
-
-#num {
-    font-size: 32px;
 }
 
 #hpBar {
@@ -180,4 +187,20 @@ p {
 
 #hpBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
     background: red;
+}
+
+#lvlBar {
+    background-color: #E6E6E6;
+    border: 2px solid black;
+    color: #00ff22;
+    width: 90%;
+}
+
+#lvlBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
+    -webkit-appearance: none;
+    background-color: #00ff22;
+}
+
+#num {
+    font-size: 32px;
 }
