@@ -5,11 +5,11 @@ button {
     font-size: 32px;
 }
 
-button:hover {
+button:enabled button:hover {
     background-color: #D8D8D8;
 }
 
-button:active {
+button:enabled button:active {
     background-color: #BDBDBD;
     border: 2px solid #151515;
 }
@@ -43,12 +43,12 @@ button:active {
     width: 100%;
 }
 
-.mii:active {
+.mii:enabled .mii:active {
     border-right: 0px;
 }
 
-.mii:active .amountLabel {
-    color: #E6E6E6;
+.mii:enabled .mii:active .amountLabel {
+    color: #D8D8D8;
 }
 
 #dmgUpgrade {
