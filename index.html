@@ -3,6 +3,9 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133471422-1"></script>
     <script>
@@ -11,7 +14,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-133471422-1');
     </script>
-    <script src="https://cdn.rawgit.com/erosson/swarm-numberformat/v0.4.0/dist/swarm-numberformat.min.js"></script>
+    <script src="//cdn.rawgit.com/erosson/swarm-numberformat/v0.4.0/dist/swarm-numberformat.min.js"></script>
     <script src="script.js"></script>
 
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
@@ -20,38 +23,40 @@
 
     <title>SSC Alpha</title>
 
-    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <div id="panel">
-        <div id="leftPanel">
-
+    <div id="mainPanel">
+        <div class="panel" id="leftPanel">
+            <img>
+            <p class="event" id="bossNextLabel"></p>
+            <img>
+            <p class="event" id="eventLabel">Nothing is happening...</p>
         </div>
-        <div id="centrePanel">
+        <div class="panel" id="centrePanel">
             <p class="label">PRIMID</p>
             <p id="hpLabel">HP</p>
-            <p class="label">10</p>
+            <p class="label" id="hp">10</p>
             <progress id="hpBar" max="10" value="10"></progress>
             <div id="enemy">
-                <img src="Images/Enemies/primid.png">
+                <img id="enemyImage" src="Images/Enemies/primid.png">
             </div>
             <div id="attackPanel">
-                <button class="attack">ATTACK</button>
+                <button class="attack" onclick="attackClicked()">ATTACK</button>
             </div>
             <p id="lvlLabel">Level 1</p>
             <p class="label">0/10</p>
             <progress id="lvlBar" max="10" value="10"></progress>
         </div>
-        <div id="rightPanel">
+        <div class="panel" id="rightPanel">
             <div id="buttonPanel">
-                <button class="menu">FIGHTERS</button>
-                <button class="menu">U</button>
-                <button class="menu">S</button>
+                <button class="menu" id="fighterMenu">FIGHTERS</button>
+                <button class="menu" id="upgradeMenu">U</button>
+                <button class="menu" id="settingMenu">S</button>
             </div>
             <p id="spiritsLabel">SPIRIT POINTS</p>
-            <p class="label">0</p>
-            <button class="mii">
+            <p class="label" id="spirits">0</p>
+            <button class="mii" id="brawler" disabled>
                 <div class="icon">
                     <img src="Images/Fighters/brawler.png">
                 </div>
@@ -62,7 +67,7 @@
                     <div class="amountLabel">0</div>
                 </div>
             </button>
-            <button class="mii">
+            <button class="mii hidden" id="fighter" disabled>
                 <div class="icon">
                     <img src="Images/Fighters/fighter.png">
                 </div>
@@ -73,7 +78,7 @@
                     <div class="amountLabel">0</div>
                 </div>
             </button>
-            <button class="mii">
+            <button class="mii hidden" id="gunner" disabled>
                 <div class="icon">
                     <img src="Images/Fighters/gunner.png">
                 </div>
