@@ -124,13 +124,13 @@ var miiDmgName = ["BEEFIER<br>BRAWLERS<br>", "SHARPER<br>SWORDS<br>", "GIRTHIER<
 var miiSpiritsName = ["BULKIER<br>BULLDOZING<br>", "DEADLIER<br>DRILLING<br>", "PRICKIER<br>PENETRATION<br>"];
 
 var enemyImage = [
-    "../Images/Enemies/primid.png",
-    "../Images/Enemies/primidScope.png",
-    "../Images/Enemies/primidSword.png",
-    "../Images/Enemies/primidBoom.png",
-    "../Images/Enemies/primidMetal.png",
-    "../Images/Enemies/primidFire.png",
-    "../Images/Enemies/primidBig.png"
+    "Images/Enemies/primid.png",
+    "Images/Enemies/primidScope.png",
+    "Images/Enemies/primidSword.png",
+    "Images/Enemies/primidBoom.png",
+    "Images/Enemies/primidMetal.png",
+    "Images/Enemies/primidFire.png",
+    "Images/Enemies/primidBig.png"
 ];
 
 function setText(id, text) {
