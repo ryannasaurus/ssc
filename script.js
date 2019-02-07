@@ -1,4 +1,6 @@
 var eventLabel;
+var name;
+var enemy;
 var attack;
 var panelButton;
 var mii;
@@ -12,7 +14,7 @@ window.onload = function () {
     eventLabel = document.querySelector("#eventLabel");
 
     name = document.querySelector("#name");
-    enemy = document.querySelector("#enemy");
+    enemy = document.querySelector("#enemyImage");
 
     attack = [
         document.querySelector("#attackButton"),
