@@ -51,22 +51,30 @@ button:enabled button:active {
     color: #D8D8D8;
 }
 
-#dmgUpgrade {
+.dmgUpgrade, .spiritsUpgrade, .boostUpgrade, .attackUpgrade {
+    font-size: 20px;
+}
+
+.dmgUpgrade, .spiritsUpgrade {
+    width: 30%;
+}
+
+.boostUpgrade, .attackUpgrade {
+    width: 100%;
+}
+
+.dmgUpgrade {
     background-color: #F4393B;
-    font-size: 20px;
 }
 
-#goldUpgrade {
+.spiritsUpgrade {
     background-color: yellow;
-    font-size: 20px;
 }
 
-#boostUpgrade {
+.boostUpgrade {
     background-color: cyan;
-    font-size: 20px;
 }
 
-#attackUpgrade {
+.attackUpgrade {
     background-color: red;
-    font-size: 20px;
 }
