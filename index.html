@@ -42,7 +42,9 @@
                 <img id="enemyImage" src="Images/Enemies/primid.png">
             </div>
             <div id="attackPanel">
-                <button class="attack" onclick="attackClicked()">ATTACK</button>
+                <button class="attack" id="attackButton">ATTACK</button>
+                <button class="attack" id="specialButton">SPECIAL</button>
+                <button class="attack" id="smashButton">SMASH</button>
             </div>
             <p id="lvlLabel">Level 1</p>
             <p class="label">0/10</p>
@@ -54,41 +56,53 @@
                 <button class="menu" id="upgradeMenu">U</button>
                 <button class="menu" id="settingMenu">S</button>
             </div>
-            <p id="spiritsLabel">SPIRIT POINTS</p>
-            <p class="label" id="spirits">0</p>
-            <button class="mii" id="brawler" disabled>
-                <div class="icon">
-                    <img src="Images/Fighters/brawler.png">
-                </div>
-                <div class="buttonInfo">
-                    <div class="miiText">MII<br>BRAWLER</div>
-                    <div class="costLabel">25</div>
-                    <!-- <span class="dpsLabel">0</span> -->
-                    <div class="amountLabel">0</div>
-                </div>
-            </button>
-            <button class="mii hidden" id="fighter" disabled>
-                <div class="icon">
-                    <img src="Images/Fighters/fighter.png">
-                </div>
-                <div class="buttonInfo">
-                    <div class="miiText">MII<br>FIGHTER</div>
-                    <div class="costLabel">150</div>
-                    <!-- <span class="dpsLabel">0</span> -->
-                    <div class="amountLabel">0</div>
-                </div>
-            </button>
-            <button class="mii hidden" id="gunner" disabled>
-                <div class="icon">
-                    <img src="Images/Fighters/gunner.png">
-                </div>
-                <div class="buttonInfo">
-                    <div class="miiText">MII<br>GUNNER</div>
-                    <div class="costLabel">500</div>
-                    <!-- <span class="dpsLabel">0</span> -->
-                    <div class="amountLabel">0</div>
-                </div>
-            </button>
+            <div id="fighterPanel">
+                <p id="spiritsLabel">SPIRIT POINTS</p>
+                <p class="label" id="spirits">0</p>
+                <button class="mii" id="brawler" disabled>
+                    <div class="icon">
+                        <img src="Images/Fighters/brawler.png">
+                    </div>
+                    <div class="buttonInfo">
+                        <div class="miiText">MII<br>BRAWLER</div>
+                        <div class="costLabel">25</div>
+                        <!-- <span class="dpsLabel">0</span> -->
+                        <div class="amountLabel">0</div>
+                    </div>
+                </button>
+                <button class="mii" id="fighter" disabled>
+                    <div class="icon">
+                        <img src="Images/Fighters/fighter.png">
+                    </div>
+                    <div class="buttonInfo">
+                        <div class="miiText">MII<br>FIGHTER</div>
+                        <div class="costLabel">150</div>
+                        <!-- <span class="dpsLabel">0</span> -->
+                        <div class="amountLabel">0</div>
+                    </div>
+                </button>
+                <button class="mii" id="gunner" disabled>
+                    <div class="icon">
+                        <img src="Images/Fighters/gunner.png">
+                    </div>
+                    <div class="buttonInfo">
+                        <div class="miiText">MII<br>GUNNER</div>
+                        <div class="costLabel">500</div>
+                        <!-- <span class="dpsLabel">0</span> -->
+                        <div class="amountLabel">0</div>
+                    </div>
+                </button>
+            </div>
+            <div id="upgradePanel"></div>
+                <button class="upgrade dmgUpgrade" id="bDmg"></button>
+                <button class="upgrade dmgUpgrade" id="fDmg"></button>
+                <button class="upgrade dmgUpgrade" id="gDmg"></button>
+                <button class="upgrade spiritsUpgrade" id="bSpirits"></button>
+                <button class="upgrade spiritsUpgrade" id="fSpirits"></button>
+                <button class="upgrade spiritsUpgrade" id="gSpirits"></button>
+                <button class="upgrade boostUpgrade" id="mBoost"></button>
+                <button class="upgrade attackUpgrade" id="aNew"></button>
+            <div id="settingPanel"></div>
         </div>
     </div>
 </body>
