@@ -1,35 +1,74 @@
 var eventLabel;
+var attack;
 var panelButton;
 var mii;
 var miiIcon;
+var miiDmgUpgrade;
+var miiSpiritsUpgrade;
+var miiBoostUpgrade;
+var attackUpgrade;
 
 window.onload = function () {
-    eventLabel = document.getElementById("eventLabel");
+    eventLabel = document.querySelector("#eventLabel");
+
+    attack = [
+        document.querySelector("#attackButton"),
+        document.querySelector("#specialButton"),
+        document.querySelector("#smashButton"),
+    ];
 
     panelButton = [
-        [document.getElementById("fighterMenu")],
-        [document.getElementById("upgradeMenu")],
-        [document.getElementById("settingMenu")]
+        document.querySelector("#fighterMenu"),
+        document.querySelector("#upgradeMenu"),
+        document.querySelector("#settingMenu")
     ];
 
     mii = [
-        [document.getElementById("brawler")],
-        [document.getElementById("fighter")],
-        [document.getElementById("gunner")]
+        document.querySelector("#brawler"),
+        document.querySelector("#fighter"),
+        document.querySelector("#gunner")
     ];
 
     miiIcon = [
-        [document.getElementById("brawler")],
-        [document.getElementById("fighter")],
-        [document.getElementById("gunner")]
+        document.querySelector("#brawler"),
+        document.querySelector("#fighter"),
+        document.querySelector("#gunner")
     ];
 
-    goldCheck();
+    miiDmgUpgrade = [
+        document.querySelector("#bDmg"),
+        document.querySelector("#fDmg"),
+        document.querySelector("#gDmg")
+    ];
+
+    miiSpiritsUpgrade = [
+        document.querySelector("#bSpirits"),
+        document.querySelector("#fSpirits"),
+        document.querySelector("#gSpirits")
+    ];
+
+    miiBoostUpgrade = document.querySelector("#mBoost");
+    attackUpgrade = document.querySelector("#aNew");
+
+    for (let i = 0; i < attack.length; i++) {
+        attack[i].onclick = function () {
+            if (!attacked)
+                eventLabel.innerHTML = "You attacked the enemy!";
+
+            attacked = true;
+            hp -= attackDmg[i];
+
+            hpCheck();
+        }
+    }
+
+    spiritsCheck();
 }
 
 var attacked = false, bossBattle = false, sUnlocked = [false, false];
 
 var bossHP = 1000, hp = 10, hpMax = 10, spirits = 0;
+var attackDmg = [1, 5, 25];  
 var dpsTotal = 0;
 var gpsTotal = 0;
 var miiValue = [25, 150, 500];
@@ -40,7 +79,7 @@ var miiUpgradePrice = [
     [375, 2250, 12500]
 ];
 var miiBoostPrice = 5000;
-var miiUpgradeBoost = [];
+var miiUpgradeBoost = [[]];
 var miiBoostBoost = 1.05;
 var attackUpgradePrice = 2500;
 
@@ -57,29 +96,29 @@ var hpMod = 1, spiritsMod = 1, level = 1, killed = 0, killedTotal = 0;
 
 var menuName = ["FIGHTERS", "HEROES", "UPGRADES", "SETTINGS"];
 var bossName = [
-    ["PETEY PIRANHA"],
-    ["RAYQUAZA"],
-    ["PORKY"],
-    ["GALLEOM TANK"],
-    ["GALLEOM"],
-    ["RIDLEY"],
-    ["DUON"],
-    ["META RIDLEY"],
-    [""],
-    ["TABUU"]
+    "PETEY PIRANHA",
+    "RAYQUAZA",
+    "PORKY",
+    "GALLEOM TANK",
+    "GALLEOM",
+    "RIDLEY",
+    "DUON",
+    "META RIDLEY",
+    "",
+    "TABUU"
 ];
 var enemyName = [
-    ["PRIMID"],
-    ["SCOPE PRIMID"],
-    ["SWORD PRIMID"],
-    ["BOOM PRIMID"],
-    ["METAL PRIMID"],
-    ["FIRE PRIMID"],
-    ["BIG PRIMID"]
+    "PRIMID",
+    "SCOPE PRIMID",
+    "SWORD PRIMID",
+    "BOOM PRIMID",
+    "METAL PRIMID",
+    "FIRE PRIMID",
+    "BIG PRIMID"
 ];
 var miiName = ["MII BRAWLER", "MII FIGHTER", "MII GUNNER"];
-var miiDmgName = ["BEEFIER\nBRAWLERS\n", "SHARPER\nSWORDS\n", "GIRTHIER\nGUNS\n"];
-var miiSpiritsName = ["BULKIER\nBULLDOZING\n", "DEADLIER\nDRILLING\n", "PRICKIER\nPENETRATION\n"];
+var miiDmgName = ["BEEFIER<br>BRAWLERS<br>", "SHARPER<br>SWORDS<br>", "GIRTHIER<br>GUNS<br>"];
+var miiSpiritsName = ["BULKIER<br>BULLDOZING<br>", "DEADLIER<br>DRILLING<br>", "PRICKIER<br>PENETRATION<br>"];
 
 function setEnabled(id) {
     id.disabled = false;
@@ -97,17 +136,6 @@ function hide(id) {
     id.style.display = none;
 }
 
-function attackClicked() {
-    if (!attacked)
-        eventLabel.innerHTML = "You attacked the enemy!";
-
-    attacked = true;
-
-    hp--;
-
-    hpCheck();
-}
-
 function hpCheck() {
     if (hp <= 0 && !bossBattle) {
         killedTotal++;
@@ -119,7 +147,7 @@ function hpCheck() {
             bossNext.clear();
             bossNextLabel.setText("");
             eventImage.setPixmap(bossShadow[bossNum]);
-            eventLabel.setText(bossName[bossNum] + "\nhas joined the battle!");
+            eventLabel.setText(bossName[bossNum] + "<br>has joined the battle!");
 
             name.setText(bossName[bossNum]);
             enemy.setPixmap(bossImage[bossNum]);
@@ -140,7 +168,7 @@ function hpCheck() {
 
             if (level % 10 == 0) {
                 bossNext.setPixmap(bossShadow[bossNum]);
-                bossNextLabel.setText("A powerful enemy\nis approaching...");
+                bossNextLabel.setText("A powerful enemy<br>is approaching...");
             }
 
             hp = 5 * (level + hpMod);
@@ -174,7 +202,7 @@ function hpCheck() {
         killedTotal++;
 
         eventImage.setPixmap(bossEvent[bossNum]);
-        eventLabel.setText(bossName[bossNum] + "\nhas been defeated!");
+        eventLabel.setText(bossName[bossNum] + "<br>has been defeated!");
 
         bossNum++;
         bossHP = 100 * level * 1.5;
@@ -205,7 +233,7 @@ function hpCheck() {
                         bossNext.clear();
                         bossNextLabel.clear();
                         eventImage.setPixmap(bossShadow[bossNum]);
-                        eventLabel.setText("GALLEOM TANK transformed\ninto GALLEOM!");
+                        eventLabel.setText("GALLEOM TANK transformed<br>into GALLEOM!");
                         name.setText(bossName[bossNum]);
                         enemy.setPixmap(bossImage[bossNum]);
 
@@ -264,7 +292,7 @@ function hpCheck() {
 
                     bossNum++;
                     eventImage.setPixmap(bossShadow[bossNum]);
-                    eventLabel.setText(bossName[bossNum] + "\n has joined the battle!");
+                    eventLabel.setText(bossName[bossNum] + "<br> has joined the battle!");
                     name.setText(bossName[bossNum]);
                     enemy.setPixmap(bossImage[bossNum]);
                     pause(false);
@@ -343,12 +371,12 @@ function hpCheck() {
             break;
     }
 
-    document.getElementById("hp").innerHTML = hp;
-    document.getElementById("hpBar").value = hp;
+    document.querySelector("#hp").innerHTML = hp;
+    document.querySelector("#hpBar").value = hp;
 }
 
 function spiritsCheck() {
-    for (i = 0; i < 3; i++) {
+    for (let i = 0; i < 3; i++) {
         if (spirits >= miiValue[i] && !mii[i].style.display === "none") {
             show(mii[i]);
             setEnabled(mii[i]);
@@ -359,37 +387,37 @@ function spiritsCheck() {
             setDisabled(mii[i]);
 
         if (spirits >= miiUpgradePrice[0][i]) {
-            miiDmgUpgrade[i].setEnabled(true);
+            setEnabled(miiDmgUpgrade[i]);
         }
         else {
-            panelButton[2].setStyleSheet("background-color: #E6E6E6;");
-            miiDmgUpgrade[i].setEnabled(false);
+            // panelButton[2].setStyleSheet("background-color: #E6E6E6;");
+            setDisabled(miiDmgUpgrade[i]);
         }
 
         if (spirits >= miiUpgradePrice[1][i]) {
-            miiSpiritsUpgrade[i].setEnabled(true);
+            setEnabled(miiSpiritsUpgrade[i]);
         }
         else {
-            panelButton[2].setStyleSheet("background-color: #E6E6E6;");
-            miiSpiritsUpgrade[i].setEnabled(false);
+            // panelButton[2].setStyleSheet("background-color: #E6E6E6;");
+            setDisabled(miiSpiritsUpgrade[i]);
         }
     }
 
     if (spirits >= miiBoostPrice) {
-        setEnabled(document.getElementById(miiBoostUpgrade));
+        setEnabled(miiBoostUpgrade);
     }
     else {
-        panelButton[2].setStyleSheet("background-color: #E6E6E6;");
-        setDisabled(document.getElementById(miiBoostUpgrade));
+        // panelButton[2].setStyleSheet("background-color: #E6E6E6;");
+        setDisabled(miiBoostUpgrade);
     }
 
     if (!sUnlocked[1] && spirits >= attackUpgradePrice) {
-        attackUpgrade.setEnabled(true);
+        setEnabled(attackUpgrade);
     }
     else {
-        panelButton[2].setStyleSheet("background-color: #E6E6E6;");
-        attackUpgrade.setEnabled(false);
+        // panelButton[2].setStyleSheet("background-color: #E6E6E6;");
+        setDisabled(attackUpgrade);
     }
 
-    document.getElementById("spirits") = numberformat.formatShort(spirits);
+    document.querySelector("#spirits").innerHTML = numberformat.formatShort(spirits);
 }
