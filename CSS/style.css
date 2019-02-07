@@ -8,14 +8,6 @@
     opacity: .9;
 }
 
-.hidden {
-    display: none;
-}
-
-.mii.hidden {
-    display: none;
-}
-
 html, body, div, span, button, img, p {
     margin: 0;
     padding: 0;   
@@ -25,6 +17,23 @@ html {
     background: url("../Images/bgSubspace.jpg") no-repeat center center fixed;
     background-size: cover;
     font-family: "Pixellari";
+}
+
+img {
+    position: relative;
+}
+
+div, p, span {
+    color: #E6E6E6;
+    font-size: 24px;
+}
+
+p {
+    text-align: center;
+}
+
+#specialButton, #smashButton, #fighter, #gunner, #upgradePanel, .upgrade, #settingPanel {
+    display: none;
 }
 
 #mainPanel {
@@ -38,12 +47,64 @@ html {
     width: 30%;
 }
 
+.event {
+    font-size: 24px;
+}
+
+#eventLabel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
 #centrePanel {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 5px;
     width: 33%;
+}
+
+#hpLabel {
+    color: red;
+}
+
+#lvlLabel {
+    color: #00ff22;
+}
+
+#hpBar {
+    -webkit-appearance: none;
+    background-color: #E6E6E6;
+    border: 2px solid black;
+    color: red;
+    width: 90%;
+}
+
+#hpBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
+    background: red;
+}
+
+#enemy {
+    height: 45vh;
+}
+
+#enemyImage {
+    height: 100%;
+}
+
+#lvlBar {
+    -webkit-appearance: none;
+    background-color: #E6E6E6;
+    border: 2px solid black;
+    color: #00ff22;
+    width: 90%;
+}
+
+#lvlBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
+    background-color: #00ff22;
 }
 
 #attackPanel {
@@ -73,27 +134,6 @@ QMessageBox QLabel {
 QMessageBox QPushButton {
     padding: 5px 10px 5px 10px;
 }*/
-
-img {
-    position: relative;
-}
-
-#enemy {
-    height: 45vh;
-}
-
-#enemyImage {
-    height: 100%;
-}
-
-div, p, span {
-    color: #E6E6E6;
-    font-size: 24px;
-}
-
-p {
-    text-align: center;
-}
 
 .label {
     font-size: 40px;
@@ -156,51 +196,4 @@ p {
     top: 73px;
     right: 25px;
     text-align: right;
-}
-
-.event {
-    font-size: 24px;
-}
-
-#eventLabel {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-}
-
-#hpLabel {
-    color: red;
-}
-
-#lvlLabel {
-    color: #00ff22;
-}
-
-#hpBar {
-    background-color: #E6E6E6;
-    border: 2px solid black;
-    color: red;
-    width: 90%;
-}
-
-#hpBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
-    background: red;
-}
-
-#lvlBar {
-    background-color: #E6E6E6;
-    border: 2px solid black;
-    color: #00ff22;
-    width: 90%;
-}
-
-#lvlBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
-    -webkit-appearance: none;
-    background-color: #00ff22;
-}
-
-#num {
-    font-size: 32px;
 }
