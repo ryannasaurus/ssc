@@ -11,6 +11,9 @@ var attackUpgrade;
 window.onload = function () {
     eventLabel = document.querySelector("#eventLabel");
 
+    name = document.querySelector("#name");
+    enemy = document.querySelector("#enemy");
+
     attack = [
         document.querySelector("#attackButton"),
         document.querySelector("#specialButton"),
@@ -68,7 +71,7 @@ window.onload = function () {
 var attacked = false, bossBattle = false, sUnlocked = [false, false];
 
 var bossHP = 1000, hp = 10, hpMax = 10, spirits = 0;
-var attackDmg = [1, 5, 25];  
+var attackDmg = [1, 5, 25];
 var dpsTotal = 0;
 var gpsTotal = 0;
 var miiValue = [25, 150, 500];
@@ -120,6 +123,24 @@ var miiName = ["MII BRAWLER", "MII FIGHTER", "MII GUNNER"];
 var miiDmgName = ["BEEFIER<br>BRAWLERS<br>", "SHARPER<br>SWORDS<br>", "GIRTHIER<br>GUNS<br>"];
 var miiSpiritsName = ["BULKIER<br>BULLDOZING<br>", "DEADLIER<br>DRILLING<br>", "PRICKIER<br>PENETRATION<br>"];
 
+var enemyImage = [
+    "../Images/Enemies/primid.png",
+    "../Images/Enemies/primidScope.png",
+    "../Images/Enemies/primidSword.png",
+    "../Images/Enemies/primidBoom.png",
+    "../Images/Enemies/primidMetal.png",
+    "../Images/Enemies/primidFire.png",
+    "../Images/Enemies/primidBig.png"
+];
+
+function setText(id, text) {
+    id.innerHTML = text;
+}
+
+function setImage(id, path) {
+    id.style.src = path;
+}
+
 function setEnabled(id) {
     id.disabled = false;
 }
@@ -134,6 +155,15 @@ function show(id) {
 
 function hide(id) {
     id.style.display = none;
+}
+
+function randomEnemy() {
+    switch (stage) {
+        case 1:
+            var randEnemy = Math.floor((Math.random() * 6) + 1);
+            setText(name, enemyName[randEnemy]);
+            setImage(enemy, enemyImage[randEnemy]);
+    }
 }
 
 function hpCheck() {
