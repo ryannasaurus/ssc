@@ -14,8 +14,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-133471422-1');
     </script>
-    <script src="//cdn.rawgit.com/erosson/swarm-numberformat/v0.4.0/dist/swarm-numberformat.min.js"></script>
-    <script src="script.js"></script>
+    <script src="Scripts/numberformat.js"></script>
 
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <link rel="stylesheet" type="text/css" href="CSS/buttons.css">
@@ -47,12 +46,12 @@
                 <button class="attack" id="smashButton">SMASH</button>
             </div>
             <p id="lvlLabel">Level 1</p>
-            <p class="label">0/10</p>
+            <p class="label" id="killed">0/10</p>
             <progress id="lvlBar" max="10" value="10"></progress>
         </div>
         <div class="panel" id="rightPanel">
             <div id="buttonPanel">
-                <button class="menu" id="fighterMenu">FIGHTERS</button>
+                <button class="menu" id="fighterMenu" disabled>FIGHTERS</button>
                 <button class="menu" id="upgradeMenu">U</button>
                 <button class="menu" id="settingMenu">S</button>
             </div>
@@ -65,9 +64,9 @@
                     </div>
                     <div class="buttonInfo">
                         <div class="miiText">MII<br>BRAWLER</div>
-                        <div class="costLabel">25</div>
+                        <div class="costLabel" id="brawlerCost">25</div>
                         <!-- <span class="dpsLabel">0</span> -->
-                        <div class="amountLabel">0</div>
+                        <div class="amountLabel" id="brawlerAmount">0</div>
                     </div>
                 </button>
                 <button class="mii" id="fighter" disabled>
@@ -76,9 +75,9 @@
                     </div>
                     <div class="buttonInfo">
                         <div class="miiText">MII<br>FIGHTER</div>
-                        <div class="costLabel">150</div>
+                        <div class="costLabel" id="fighterCost">150</div>
                         <!-- <span class="dpsLabel">0</span> -->
-                        <div class="amountLabel">0</div>
+                        <div class="amountLabel" id="fighterAmount">0</div>
                     </div>
                 </button>
                 <button class="mii" id="gunner" disabled>
@@ -87,9 +86,9 @@
                     </div>
                     <div class="buttonInfo">
                         <div class="miiText">MII<br>GUNNER</div>
-                        <div class="costLabel">500</div>
+                        <div class="costLabel" id="gunnerCost">500</div>
                         <!-- <span class="dpsLabel">0</span> -->
-                        <div class="amountLabel">0</div>
+                        <div class="amountLabel" id="gunnerAmount">0</div>
                     </div>
                 </button>
             </div>
@@ -105,6 +104,8 @@
             <div id="settingPanel"></div>
         </div>
     </div>
+    
+    <script src="Scripts/script.js"></script>
 </body>
 
 </html>

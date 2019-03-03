@@ -71,10 +71,6 @@ p {
     color: red;
 }
 
-#lvlLabel {
-    color: #00ff22;
-}
-
 #hpBar {
     -webkit-appearance: none;
     background-color: #E6E6E6;
@@ -95,16 +91,19 @@ p {
     height: 100%;
 }
 
+#lvlLabel, #lvlBar {
+    color: #00bd19;
+}
+
 #lvlBar {
     -webkit-appearance: none;
     background-color: #E6E6E6;
     border: 2px solid black;
-    color: #00ff22;
     width: 90%;
 }
 
 #lvlBar::-moz-progress-bar, #hpBar::-webkit-progress-value {
-    background-color: #00ff22;
+    background-color: #00bd19;
 }
 
 #attackPanel {
@@ -119,6 +118,10 @@ p {
 #buttonPanel {
     display: inline-flex;
     text-align: left;
+}
+
+#upgradePanel, #settingPanel {
+    display: none;
 }
 
 /* QMessageBox {
