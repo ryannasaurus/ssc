@@ -42,21 +42,33 @@ p {
     padding-bottom: 0.3%;
 }
 
+.panel {
+    height: 90vh;
+}
+
 #leftPanel {
-    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 30%;
 }
 
-.event {
-    font-size: 24px;
+.eventBox {
+    height: 50%;
 }
 
-#eventLabel {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.eventBoxImage {
+    height: 95%;
+}
+
+.event {
+    height: 5%;
+    font-size: 24px;
     text-align: center;
+}
+
+#bossNext, #eventImage {
+    height: 100%;
 }
 
 #centrePanel {
@@ -84,14 +96,14 @@ p {
 }
 
 #enemy {
-    height: 45vh;
+    height: 45%;
 }
 
 #enemyImage {
     height: 100%;
 }
 
-#lvlLabel, #lvlBar {
+#lvl, #lvlBar {
     color: #00bd19;
 }
 

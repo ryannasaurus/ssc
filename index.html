@@ -27,10 +27,18 @@
 <body>
     <div id="mainPanel">
         <div class="panel" id="leftPanel">
-            <img>
-            <p class="event" id="bossNextLabel"></p>
-            <img>
-            <p class="event" id="eventLabel">Nothing is happening...</p>
+            <div class="eventBox">
+                <div class="eventBoxImage">
+                    <img id="bossNext">
+                </div>
+                <div class="event" id="bossNextLabel"></div>
+            </div>
+            <div class="eventBox">
+                <div class="eventBoxImage">
+                    <img id="eventImage">
+                </div>
+                <div class="event" id="eventLabel">Nothing is happening...</div>
+            </div>
         </div>
         <div class="panel" id="centrePanel">
             <p class="label" id="name">PRIMID</p>
@@ -45,7 +53,7 @@
                 <button class="attack" id="specialButton">SPECIAL</button>
                 <button class="attack" id="smashButton">SMASH</button>
             </div>
-            <p id="lvlLabel">Level 1</p>
+            <p id="lvl">Level 1</p>
             <p class="label" id="killed">0/10</p>
             <progress id="lvlBar" max="10" value="10"></progress>
         </div>
@@ -55,9 +63,9 @@
                 <button class="menu" id="upgradeMenu">U</button>
                 <button class="menu" id="settingMenu">S</button>
             </div>
+            <p id="spiritsLabel">SPIRIT POINTS</p>
+            <p class="label" id="spirits">0</p>
             <div id="fighterPanel">
-                <p id="spiritsLabel">SPIRIT POINTS</p>
-                <p class="label" id="spirits">0</p>
                 <button class="mii" id="brawler" disabled>
                     <div class="icon">
                         <img src="Images/Fighters/brawler.png">
@@ -92,7 +100,7 @@
                     </div>
                 </button>
             </div>
-            <div id="upgradePanel"></div>
+            <div id="upgradePanel">
                 <button class="upgrade dmgUpgrade" id="bDmg"></button>
                 <button class="upgrade dmgUpgrade" id="fDmg"></button>
                 <button class="upgrade dmgUpgrade" id="gDmg"></button>
@@ -100,11 +108,11 @@
                 <button class="upgrade spiritsUpgrade" id="fSpirits"></button>
                 <button class="upgrade spiritsUpgrade" id="gSpirits"></button>
                 <button class="upgrade boostUpgrade" id="mBoost"></button>
-                <button class="upgrade attackUpgrade" id="aNew"></button>
+                <button class="upgrade attackUpgrade" id="aNew"></button></div>
             <div id="settingPanel"></div>
         </div>
     </div>
-    
+
     <script src="Scripts/script.js"></script>
 </body>
 
